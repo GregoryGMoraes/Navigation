@@ -10,7 +10,6 @@ function Register() {
             <KeyboardAvoidingView
                 behavior
                 style={styles.container}>
-
                 <View style={styles.Card}>
 
                     <Text style={styles.titleCard}>Dados Pessoais</Text>

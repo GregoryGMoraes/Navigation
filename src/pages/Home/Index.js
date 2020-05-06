@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native';
+
 
 function Home( {navigation} ) {
     return (
         <View style={styles.container}>
-            
+            <ImageBackground source={require('/fatec/react-native/Navi/img/back.png')}  style={styles.backImage}>
+            <Image source={require('/fatec/react-native/Navi/img/icon.png')} style={styles.logo}/>
             <Text style={styles.title}>FacilitaPRO</Text>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Login")}>
                 <Text style={styles.textButton}>Login</Text>
@@ -12,6 +14,7 @@ function Home( {navigation} ) {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Register")}>
                 <Text style={styles.textButton}>Cadastrar</Text>
             </TouchableOpacity>
+            </ImageBackground>
         </View>
 
     )
@@ -29,6 +32,18 @@ const styles = StyleSheet.create({
         fontSize: 42,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+
+    backImage:{
+        height: 650,
+        width: 450,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    logo:{
+        width: 150,
+        height: 150,
     },
 
     button: {
